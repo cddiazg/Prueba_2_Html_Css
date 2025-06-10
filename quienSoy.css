@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    overflow-x: hidden; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+#header {
+    background-color: #000000; /* Azul oscuro */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+.logo a {
+    letter-spacing: 3px;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 500;
+    color: white;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1; /* Permite que la nav ocupe el espacio */
+    justify-content: flex-end; /* Alinea a la derecha */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #3498db; /* Azul más claro */
+}
+
+.nav-button {
+    background-color: #27ae60;
+    color: rgb(255, 247, 247);
+    border: none;
+    padding: 10px 10px 10px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-out;
+}
+
+.nav-button img {
+    width:30px;
+    margin-right:15px ;
+}
+
+.nav-button:hover {
+    background-color: #2ecc71;
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none; /* Oculto en escritorio */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 20px 30px 0px 0px;
+}
+
+.menu-toggle img {
+    width: 50px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    border-radius: 4px;
+    right:10px ;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    color: rgb(0, 0, 0);
+    background: #575555;
+    border: bottom 10px blue ;
+}
+
+.dropdown-content a:hover {
+    background: #f0f0f0;
+}
+
+.menu-toggle:hover .dropdown-content {
+    display: block;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdnwordpresstest-f0ekdgevcngegudb.z01.azurefd.net/es/wp-content/uploads/2023/05/Panoramica-Mural-Constelaciones-2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+    margin-bottom: 2rem;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.crafts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+.craft-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.craft-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.craft-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.craft-info {
+    padding: 1.5rem;
+}
+.craft-info h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+.artisan {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+.description {
+    color: #444;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.craft-card:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.craft-card:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #000000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+    .craft-card:not(:last-child) {
+        margin-bottom: 0;
+    }
+}
+.craft-card:focus-within {
+    outline: 2px solid #e67e22;
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+.header-content {
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el logo a la izquierda */
+}
+
+.main-nav {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Oculta el menú por defecto */
+    text-align: center;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.nav-links li {
+    width: 100%;
+}
+
+.nav-links a, .nav-button {
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+
+.nav-button {
+    margin-top: 10px;
+}
+
+.menu-toggle {
+    display: block; /* Muestra el botón de menú */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.main-nav.active {
+    display: flex; /* Muestra el menú cuando está activo */
+}
+
+.hero-title {
+    font-size: 2.5rem;
+}
+
+.hero-description {
+    font-size: 1rem;
+}
+
+.section-title {
+    font-size: 2rem;
+}
+
+.features-grid {
+    grid-template-columns: 1fr; /* Una columna en móviles */
+}
+
+.cta-content h2 {
+    font-size: 1.8rem;
+}
+
+.cta-content p {
+    font-size: 1rem;
+}
+
+.footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-col {
+    min-width: unset; /* Elimina el min-width */
+    width: 100%;
+}
+
+.social-links {
+    justify-content: center;
+}
+}
+
+@media (max-width: 480px) {
+.container {
+    padding: 0 15px;
+}
+.header {
+    padding: 1rem 15px;
+}
+.hero-title {
+    font-size: 2rem;
+}
+.hero-description {
+    font-size: 0.9rem;
+}
+.hero-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+}
+.section-title {
+    font-size: 1.8rem;
+}
+.feature-item {
+    padding: 20px;
+}
+.feature-item h3 {
+    font-size: 1.3rem;
+}
+.testimonial-slide .quote {
+    font-size: 1.1rem;
+}
+.testimonial-slide .author {
+    font-size: 0.9rem;
+}
+.cta-content h2 {
+    font-size: 1.5rem;
+}
+.cta-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+}
+.footer-col h3 {
+    font-size: 1.2rem;
+}
+.footer-col p, .footer-col ul {
+    font-size: 0.85rem;
+}
+}
+
